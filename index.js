@@ -20,6 +20,17 @@ client.on('message', async message => {
         message.react('💩');
     };
 
+    if (message.content === `${prefix}kleur`){
+        const hex = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
+        var chosenColor = '#';
+
+        for (let index = 0; index <= 5; index++) {
+            let pickedHex = hex[Math.floor(Math.random() * 16)];
+            var chosenColor = chosenColor.concat(pickedHex);
+        };
+        message.channel.send(chosenColor);
+    };
+
     if (message.content === triggerWord[1]){
         let gebruiker = message.member.displayName;
         console.log(triggerWord)
