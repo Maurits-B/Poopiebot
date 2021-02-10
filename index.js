@@ -9,8 +9,6 @@ client.once('ready', () => {
 
 client.login(token);
 
-const triggerWord = ["stinky", "shit"];
-
 client.on('message', async message => {
 	if (message.content === `${prefix}ping`){
         message.channel.send(`pong! \ndit is versie ${versie} van Poopiebot`);
