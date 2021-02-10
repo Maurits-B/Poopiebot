@@ -30,10 +30,4 @@ client.on('message', async message => {
         };
         message.channel.send(chosenColor);
     };
-
-    if (message.content === triggerWord[1]){
-        let gebruiker = message.member.displayName;
-        console.log(triggerWord)
-        message.channel.send(`Hihi ${gebruiker} stuurde een stinky winky woord.`);
-    };
 });
